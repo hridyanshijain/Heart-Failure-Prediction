@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Heart Failure Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <center>
+    <div class="container">
+        <h1>Heart Failure Prediction Form</h1>
+        <form method="POST" action="/predict">
+            {% for field in ['age','anaemia y:1 n:0','creatinine_phosphokinase','diabetes y:1 n:0','ejection_fraction','high_bp y:1 n:0','platelets','serum_creatinine','serum_sodium','sex m:1 f:0','smoking y:1 n:0','time'] %}
+                <input type="text" name="{{ field }}" placeholder="{{ field|replace('_', ' ')|title }}" required><br>
+            {% endfor %}
+            <br><br>
+            <button type="submit">Predict</button>
+             &nbsp;&nbsp;
+            <button type="reset">Clear</button>
+        </form>
+    </div>
+    </center>
+
+
+    <!-- -------------------------------------------------- -->
+    <style>
+    body {
+        background-image: url("{{ url_for('static', filename='images/heart-bg.jpg') }}");
+        background-size: cover;
+        background-position: center;
+        font-family: 'Segoe UI', sans-serif;
+        color: white;
+    }
+    .container {
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 30px;
+        border-radius: 15px;
+        width: 50%;
+        margin-top: 50px;
+    }
+    input, button {
+        padding: 10px;
+        margin: 10px;
+        width: 80%;
+        border-radius: 8px;
+        border: none;
+    }
+    button {
+        background-color: #ff4d4d;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #ff1a1a;
+    }
+    </style>
+    <!-- <img src="{{ url_for('static', filename='images/heart-logo.png') }}" alt="Heart Logo" width="150" style="margin-top: 20px;"> -->
+
+   
+
+    <!-- -------------------------------------------------- -->
+
+
+
+
+
+</body>
+</html>
+

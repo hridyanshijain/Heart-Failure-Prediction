@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <center>
+    <div class="container">
+        <h2>Prediction Result</h2>
+        <p class="result">{{ result }}</p>
+        <a href="/">Try Again</a>
+    </div>
+    </center>
+
+    <!-- ----------------------------------------- -->
+        <style>
+    body {
+        background-image: url("{{ url_for('static', filename='images/heart-bg.jpg') }}");
+        background-size: cover;
+        background-position: center;
+        font-family: 'Segoe UI', sans-serif;
+        color: white;
+    }
+    .container {
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 30px;
+        border-radius: 15px;
+        width: 50%;
+        margin-top: 50px;
+    }
+    input, button {
+        padding: 10px;
+        margin: 10px;
+        width: 80%;
+        border-radius: 8px;
+        border: none;
+    }
+    button {
+        background-color: #ff4d4d;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #ff1a1a;
+    }
+    </style>
+    <!-- <img src="{{ url_for('static', filename='images/heart-logo.png') }}" alt="Heart Logo" width="150" style="margin-top: 20px;"> -->
+
+    <!-- ----------------------------------------- -->
+
+
+
+
+</body>
+</html>
